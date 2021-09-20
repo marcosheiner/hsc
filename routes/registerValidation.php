@@ -33,21 +33,21 @@ if (!isset($_SESSION)) {
 
     if ($row_sql['total_email'] == 1) {
       $_SESSION['email_existe'] = true;
-      header("Location: ../pages/registerValidation.php");
+      header("Location: ../pages/registerUser.php");
       exit;
     }
 
     if ($row_check_username['total_username'] == 1) {
 
       $_SESSION['usuario_existe'] = true;
-      header("Location: ../pages/registerValidation.php");
+      header("Location: ../pages/registerUser.php");
       exit;
     }
 
     if (strlen(trim($_POST['senha_user'])) < 6) {
 
       $_SESSION['tamanho_senha'] = true;
-      header("location: ../pages/registerValidation.php");
+      header("location: ../pages/registerUser.php");
       exit;
     }
 

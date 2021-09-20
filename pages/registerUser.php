@@ -88,18 +88,16 @@ include "../config/conn.php";
             <input type="email" class="form-control form-control-lg input-login" id="email_user" name="email_user" placeholder="example@mail.com" required>
           </div>
           <div class="form-group">
-            <label for="customFile">Foto de Perfil</label>
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" id="customFile" name="img_perfil">
-              <label class="custom-file-label" for="customFile">Escolher foto</label>
-            </div>
-          </div>
-          <div class="form-group">
             <label for="senha_user">Senha</label>
             <input type="password" class="form-control form-control-lg input-login" id="senha_user" name="senha_user" placeholder="Senha" required>
           </div>
           <div class="form-group">
-            <input type="hidden" name="funcao_user" value="admin" required>
+            <label for="exampleFormControlSelect1">Escolha a função do usuário</label>
+            <select class="form-control" id="funcao_user" name="funcao_user">
+              <option value="admin">Admin</option>
+              <option value="gerente">Gerente</option>
+              <option value="funcionario">Funcionário</option>
+            </select>
           </div>
           <button type="submit" name="cadastrar_usuario" class="mb-4 w-100 btn btn-lg btn-login">Criar Conta</button>
         </form>
