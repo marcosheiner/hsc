@@ -1,3 +1,9 @@
+<?php
+session_start();
+include "../config/conn.php";
+?>
+
+
 <?php include '../includes/menu.php'; ?>
 
 <div class="container">
@@ -6,7 +12,14 @@
 
   <div class="row">
     <div class="col-xl-6 col-md-6 mt-5">
-      <form method="POST" action="../routes/login_check.php">
+      <!--error msg login-->
+      <?php if (isset($_GET['error'])) { ?>
+        <div class="alert alert-danger" role="alert">
+          <?= $_GET['error'] ?>
+        </div>
+      <?php } ?>
+
+      <form method="POST" action="../routes/loginCheck.php">
         <div class="form-group">
           <i class="float-right fas fa-envelope fa-sm" style="margin-top: 2px;"></i>
           <label for="email">E-mail</label>
@@ -21,7 +34,7 @@
         <button type="submit" class="mb-4 w-100 btn btn-lg btn-login">Entrar</button>
       </form>
 
-      <div class="alert alert-danger" role="alert">
+      <div class="alert alert-info" role="alert">
         <i class="fa-xs fas fa-exclamation-triangle"></i>
         <p>Atenção! Área restrita apenas para funcionários.</p>
         <p>Voltar para o início <a href="../index.php">Clique aqui</a></p>
