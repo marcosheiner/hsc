@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14.5px
+}
+
+body {
+    background-color: #fff;
+}
+
+label {
+    font-weight: 600;
+}
+
+p {
+    margin: 0;
+}
+
+.alert {
+    border: none;
+    border-radius: 5px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+
+/*remover icones input validação*/
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-image: none !important;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    background-image: none !important;
+}
+
+
+/*scroll bar*/
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #1b294e;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #0e1938;
+}
+
+
+/*menu index*/
+
+.nav-get-start {
+    background-color: #f4f7ff;
+    color: #2337d6;
+    border-radius: 5px;
+}
+
+.nav-get-start:hover {
+    background-color: #1b294e;
+    color: #f4f4f4;
+}
+
+.nav-link-get-start {
+    color: #1b294e!important;
+}
+
+.nav-link-get-start:hover {
+    color: #f4f4f4!important;
+}
+
+.nav-link {
+    color: #555;
+}
+
+.nav-link:hover {
+    color: #0e1938;
+}
+
+.navbar {
+    font-weight: 700;
+}
+
+.footer-pages {
+    background-color: #1b294e;
+    color: white;
+}
+
+
+/*text e imagem index*/
+
+.text-index {
+    font-weight: 700;
+}
+
+.btn-get-start {
+    background-color: #1b294e;
+    color: #f4f7ff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn-get-start:hover {
+    background-color: #0e1938;
+    color: #f4f4f4;
+}
+
+.area-img {
+    display: grid;
+    place-content: center;
+}
+
+.img-home {
+    max-width: 100%;
+}
+
+
+/*login*/
+
+.area-login {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    max-height: 100%;
+    height: auto;
+}
+
+.box-login {
+    border-radius: 5px;
+    padding: 2em;
+    max-width: 100%;
+    width: 350px;
+}
+
+.input-login {
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.btn-login {
+    background-color: #1b294e;
+    color: #f4f7ff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn-login:hover {
+    background-color: #0e1938;
+    color: #f4f4f4;
+}
+
+
+/*card anuncio*/
+
+.area-card-anuncio {
+    padding: 1em;
+    display: grid;
+    place-items: left;
+}
+
+.card {
+    border-radius: 5px;
+}
+
+.card-body {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.btn-detalhes {
+    background-color: #2337d6;
+    color: #f4f7ff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn-detalhes:hover {
+    background-color: #1653f0;
+    color: #f4f7ff;
+}
+
+.img-card {
+    max-width: 100%;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    opacity: 0.9;
+    transition: 500ms;
+}
+
+.img-card:hover {
+    opacity: 1;
+}
+
+
+/*menu dashboard*/
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+
+/*
+   * Sidebar
+   */
+
+.sidebar {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    /* Behind the navbar */
+    padding: 55px 10px 0;
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        top: 5rem;
+    }
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #2337d6;
+}
+
+.sidebar .nav-link:hover {
+    color: #1653f0;
+}
+
+.sidebar .nav-item {
+    border-radius: 5px;
+    color: #1653f0;
+}
+
+.sidebar .nav-item:hover {
+    color: #1653f0;
+    border-radius: 5px;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #f4f7ff;
+}
+
+.sidebar .nav-link.active {
+    color: #f4f7ff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    text-transform: uppercase;
+}
+
+
+/*dashboard*/
+
+.card-dados {
+    background: rgb(22, 83, 240);
+    background: linear-gradient(90deg, rgba(22, 83, 240, 1) 0%, rgba(35, 55, 214, 1) 100%);
+    color: white;
+    border-radius: 5px;
+}
+
+.card-dados-all {
+    background-color: #f4f7ff;
+    color: #1653f0;
+    border-radius: 5px;
+}
+
+.list-anun-dashboard {
+    font-weight: 300;
+    color: black;
+    border-radius: 5px;
+}
+
+.btn-list-anun {
+    background-color: #2337d6;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn-list-anun:hover {
+    background-color: #1653f0;
+    color: whitesmoke;
+}
+
+
+/*criar anuncio*/
+
+.btn-anunciar {
+    background-color: #2337d6;
+    color: #f1f1f1;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn-anunciar:hover {
+    background-color: #1653f0;
+    color: #f4f4f4;
+}
+
+.btn-reset {
+    font-weight: 600;
+    color: #dc3545;
+    border-radius: 5px;
+}
+
+.btn-reset:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+/*meus anuncios*/
+
+.btn-editar {
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn-deletar {
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+
+/*perfil*/
+
+.foto-perfil {
+    max-width: 100%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.area-perfil {
+    border-radius: 5px;
+}
+
+.img-meus-anuncios {
+    max-width: 100%;
+    border-radius: 5px;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+
+/*title pages*/
+
+.title-page {
+    font-weight: 700;
+}
+
+
+/*sobre*/
+
+.title-sobre {
+    font-weight: 500;
+}
+
+.text-sobre {
+    font-size: 20px;
+}
+
+.img-sobre {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+
+/*suporte*/
+
+.area__suporte {
+    background-color: #f4f7ff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.link__suporte {
+    color: #0e1938;
+}
+
+.link__suporte:hover {
+    color: #1b294e;
+}
