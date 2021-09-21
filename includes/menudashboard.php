@@ -29,7 +29,7 @@
     <div class="row">
       <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse border">
         <div class="sidebar-sticky pt-3">
-          <?php if ($_SESSION['funcao'] == 'funcionario' || $_SESSION['funcao'] == 'gerente' || $_SESSION['funcao'] == 'admin') { ?>
+          <?php if ($_SESSION['funcao'] == 'funcionario' || $_SESSION['funcao'] == 'gerente') { ?>
             <ul class="nav flex-column">
               <li class="nav-item m-1 border">
                 <a class="nav-link" href="../pages/dashboard.php">
@@ -58,7 +58,7 @@
             </ul>
           <?php } ?>
           <?php if ($_SESSION['funcao'] == 'admin' || $_SESSION['funcao'] == 'gerente') { ?>
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-1 mt-4 mb-1 text-muted">
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-1 mt-1 mb-1 text-muted">
               <small>Usuários</small>
               <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
               </a>
@@ -85,7 +85,7 @@
             </ul>
           <?php } ?>
 
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-1 mt-4 mb-1 text-muted">
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-1 mt-1 mb-1 text-muted">
             <small>Configurações</small>
             <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
             </a>

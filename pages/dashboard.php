@@ -9,8 +9,11 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
   <main role="main" class="mt-3 col-md-9 ml-sm-auto col-lg-10 px-md-4">
 
     <?php if ($_SESSION['funcao'] == 'admin' || $_SESSION['funcao'] == 'funcionario' || $_SESSION['funcao'] == 'gerente') { ?>
-      <span class="badge badge-danger text-light">
+      <span class="badge badge-danger text-light text-capitalize">
         <?php echo $_SESSION['funcao']; ?>
+      </span>
+      <span class="float-right text-muted text-capitalize">
+        Bem-vindo, Marcos! 😎
       </span>
     <?php } ?>
 
@@ -36,7 +39,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
 
       <?php } ?>
 
-      <?php if ($_SESSION['funcao'] == 'admin') { ?>
+      <?php if ($_SESSION['funcao'] == 'admin' || $_SESSION['funcao'] == 'gerente') { ?>
         <div class="col-xl-4 col-md-6 mb-4">
           <div class="card-dados-all p-4">
             <h1 style="font-weight: 600;">3</h1>
@@ -53,15 +56,6 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
           <p>Código de Usuário</p>
         </div>
       </div>
-      <?php if ($_SESSION['funcao'] == 'moderador' || $_SESSION['funcao'] == 'admin') { ?>
-        <div class="col-xl-4 col-md-6 mb-4">
-          <div class="card-dados-all p-4">
-            <h1 style="font-weight: 600;">2</h1>
-            <i class="float-right fas fa-exclamation-triangle"></i>
-            <p>Denúncias</p>
-          </div>
-        </div>
-      <?php } ?>
     </div>
 
     <?php if ($_SESSION['funcao'] == 'funcionario' || $_SESSION['funcao'] == 'gerente') { ?>
