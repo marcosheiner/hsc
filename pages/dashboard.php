@@ -8,17 +8,16 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
 
   <main role="main" class="mt-3 col-md-9 ml-sm-auto col-lg-10 px-md-4">
 
-    <?php if ($_SESSION['funcao'] == 'admin') { ?>
-      <div class="alert alert-warning">
-        Sessão iniciada como <span style="font-weight: 600;"><?php echo $_SESSION['funcao']; ?></span>
-      </div>
+    <?php if ($_SESSION['funcao'] == 'admin' || $_SESSION['funcao'] == 'funcionario' || $_SESSION['funcao'] == 'gerente') { ?>
+      <span class="badge badge-danger text-light">
+        <?php echo $_SESSION['funcao']; ?>
+      </span>
     <?php } ?>
 
-    <h1 class="h3 mb-3" style="font-weight: 700;">Overview</h1>
+    <h1 class="h3 mb-3" style="font-weight: 700;">Dashboard</h1>
     <div class="row">
       <?php if ($_SESSION['funcao'] == 'funcionario' || $_SESSION['funcao'] == 'gerente' || $_SESSION['funcao'] == 'admin') { ?>
 
-        <a href="../routes/logout.php">Sair</a>
 
         <div class="col-xl-4 col-md-6 mb-4">
           <div class="card-dados p-4">

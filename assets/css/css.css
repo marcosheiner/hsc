@@ -108,6 +108,13 @@ p {
     color: white;
 }
 
+.navbar-brand{
+    color: #1b294e;
+}
+.navbar-brand:hover{
+    color: #0e1938;
+}
+
 
 /*text e imagem index*/
 
@@ -246,9 +253,7 @@ p {
 }
 
 @media (max-width: 767.98px) {
-    .sidebar {
-        top: 5rem;
-    }
+   
 }
 
 .sidebar-sticky {
@@ -270,20 +275,20 @@ p {
 
 .sidebar .nav-link {
     font-weight: 500;
-    color: #2337d6;
+    color: #1b294e;
 }
 
 .sidebar .nav-link:hover {
-    color: #1653f0;
+    color: #0e1938;
 }
 
 .sidebar .nav-item {
     border-radius: 5px;
-    color: #1653f0;
+    color: #1b294e;
 }
 
 .sidebar .nav-item:hover {
-    color: #1653f0;
+    color: #1b294e;
     border-radius: 5px;
 }
 
@@ -309,15 +314,15 @@ p {
 /*dashboard*/
 
 .card-dados {
-    background: rgb(22, 83, 240);
-    background: linear-gradient(90deg, rgba(22, 83, 240, 1) 0%, rgba(35, 55, 214, 1) 100%);
+    background: rgb(27,41,78);
+    background: linear-gradient(90deg, rgba(27,41,78,1) 0%, rgba(1,13,46,1) 100%);
     color: white;
     border-radius: 5px;
 }
 
 .card-dados-all {
     background-color: #f4f7ff;
-    color: #1653f0;
+    color: #1b294e;
     border-radius: 5px;
 }
 
