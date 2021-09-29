@@ -29,6 +29,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
             <p>Meus Anúncios</p>
           </div>
         </div>
+
         <div class="col-xl-4 col-md-6 mb-4">
           <div class="card-dados-all p-4">
             <h1 style="font-weight: 600;">3</h1>
