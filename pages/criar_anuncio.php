@@ -2,6 +2,9 @@
 session_start();
 include "../config/conn.php";
 if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
+
+
+
   <!--//////////////////////////////////////////////////////////////////-->
 
   <?php include '../includes/menudashboard.php'; ?>
@@ -219,14 +222,28 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
       <!--form row-->
 
       <div class="form-row mt-3">
+
+        <div class="form-group col-md-12">
+          <label for="">Título<span class="text-danger">*</span></label>
+          <input type="text" class="form-control text-capitalize" name="titulo" placeholder="Ex: Casa com 4 quartos..." required>
+          <div class="invalid-feedback">
+            Digite um título.
+          </div>
+
+        </div>
+      </div>
+      <!--form row-->
+      <div class="form-row mt-3">
+
         <label for="">Descrição do anúncio<span class="text-danger">*</span></label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" required></textarea>
         <div class="invalid-feedback">
           Digite uma descrição.
         </div>
+
       </div>
       <!--form row-->
-      <button type="submit" name="cadastrar_anuncio" class="btn btn-anunciar pl-5 pr-5 mt-4 mb-4">Anunciar</button>
+      <button type="submit" name="cadastrar_anuncio" class="btn btn-anunciar pt-3 pb-3 pl-5 pr-5 mt-4 mb-4">Anunciar</button>
     </form>
 
     <script>
