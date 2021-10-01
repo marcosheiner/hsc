@@ -76,6 +76,10 @@ include "../config/conn.php";
             <input type="text" class="form-control form-control-lg input-login text-capitalize" id="nome_completo" name="nome_completo" placeholder="Seu nome" value="" required>
           </div>
           <div class="form-group">
+            <label for="nome_completo">CRECI</label>
+            <input type="text" class="form-control form-control-lg input-login text-capitalize" id="creci" name="creci" placeholder="Seu Creci" value="" required>
+          </div>
+          <div class="form-group">
             <label for="nome_user">Nome Usuário</label>
             <input type="text" class="form-control form-control-lg input-login text-lowercase" id="nome_user" name="nome_user" placeholder="Usuário" required>
           </div>

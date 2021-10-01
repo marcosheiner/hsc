@@ -100,8 +100,8 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
           <?php while ($dados_anun = $result_anun->fetch_array()) { ?>
             <div class="col-xl-2 col-md-4 col-sm-4 mb-2">
               <div class="list-anun-dashboard border p-3 text-center">
-                <p class="mb-2" style="font-weight: 600;">Venda</p>
-                <p class="mb-2">R$ 2.000,90</p>
+                <p class="mb-2" style="font-weight: 600;"><?php echo $dados_anun["tipo_anuncio"]; ?></p>
+                <p class="mb-2">R$ <?php echo $dados_anun["valor"]; ?></p>
                 <a href="" class="w-100 btn btn-list-anun">Detalhes</a>
               </div>
             </div>

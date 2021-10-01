@@ -9,6 +9,7 @@ if (!isset($_SESSION)) {
 
     $nome_user = trim($_POST['nome_user']);
     $nome_completo = trim($_POST['nome_completo']);
+    $creci = trim($_POST['creci']);
     $email_user = trim($_POST['email_user']);
     $telefone_user = $_POST['telefone_user'];
     $funcao_user = $_POST['funcao_user'];
@@ -51,7 +52,7 @@ if (!isset($_SESSION)) {
       exit;
     }
 
-    $check_sql = "INSERT INTO usuario (nome_completo, nome_user, email_user, telefone_user, senha, funcao, data_cadastro) VALUES ('$nome_completo', '$nome_user', '$email_user', '$telefone_user', '$senha_user', '$funcao_user', NOW())";
+    $check_sql = "INSERT INTO usuario (nome_completo, creci, nome_user, email_user, telefone_user, senha, funcao, data_cadastro) VALUES ('$nome_completo', '$creci', '$nome_user', '$email_user', '$telefone_user', '$senha_user', '$funcao_user', NOW())";
 
     if ($conn->query($check_sql) === TRUE) {
       $_SESSION['validar_cadastro'] = true;

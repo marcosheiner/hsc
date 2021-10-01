@@ -63,8 +63,8 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
 
         <div class="form-group col-md-3">
           <label for="">CRECI<span class="text-danger">*</span></label>
-          <input type="number" class="form-control text-capitalize" name="creci" placeholder="CRECI" required>
-          <div class="invalid-feedback">
+          <input type="text" class="form-control text-capitalize disabled" name="creci" value="<?php echo $_SESSION['creci']; ?>" required readonly="readonly">
+          <div class=" invalid-feedback">
             Digite um creci.
           </div>
         </div>

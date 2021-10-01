@@ -32,6 +32,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
 
             if ($row['senha'] === $senha && $row['email_user'] === $email) {
                 $_SESSION['nome_usuario']       = $row['nome_completo'];
+                $_SESSION['creci']       = $row['creci'];
                 $_SESSION['id']                 = $row['id'];
                 $_SESSION['nome_user']          = $row['nome_user'];
                 $_SESSION['email_user']         = $row['email_user'];
