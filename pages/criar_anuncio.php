@@ -11,9 +11,43 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
 
   <main role="main" class="mt-3 col-md-9 ml-sm-auto col-lg-10 px-md-4">
     <h1 class="h3 mb-3" style="font-weight: 700;">Criar Anúncio</h1>
+    <?php if (isset($_SESSION['cad_sucesso'])) : ?>
+      <div class="alert alert-success" role="alert">
+        <?= $_SESSION['cad_sucesso']; ?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <?php
+    endif;
+    unset($_SESSION['cad_sucesso']);
+    ?>
 
+    <?php if (isset($_SESSION['cad_err'])) : ?>
+      <div class="alert alert-danger" role="alert">
+        <?= $_SESSION['cad_err']; ?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <?php
+    endif;
+    unset($_SESSION['cad_err']);
+    ?>
+
+    <?php if (isset($_SESSION['extensao_err'])) : ?>
+      <div class="alert alert-danger" role="alert">
+        <?= $_SESSION['extensao_err']; ?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <?php
+    endif;
+    unset($_SESSION['extensao_err']);
+    ?>
     <!--formulário para criar anuncio-->
-    <form action="" enctype="multipart/form-data" method="POST" class="needs-validation" novalidate>
+    <form action="../routes/uploadAnuncio.php" enctype="multipart/form-data" method="POST" class="needs-validation" novalidate>
       <small class="text-muted"><span>Responsável e Localidade
           <hr>
         </span></small>
@@ -21,7 +55,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
 
         <div class="form-group col-md-3">
           <label for="">Corretor Responsável<span class="text-danger">*</span></label>
-          <input type="text" class="form-control text-capitalize" name="nameCorretor" placeholder="Corretor Responsável" required>
+          <input type="text" class="form-control text-capitalize disabled" name="nameCorretor" value="<?php echo $_SESSION['nome_usuario']; ?>" required readonly="readonly">
           <div class="invalid-feedback">
             Digite um nome.
           </div>
@@ -236,7 +270,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
       <div class="form-row mt-3">
 
         <label for="">Descrição do anúncio<span class="text-danger">*</span></label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" required></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="descricao" rows="8" required></textarea>
         <div class="invalid-feedback">
           Digite uma descrição.
         </div>

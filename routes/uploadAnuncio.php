@@ -16,17 +16,23 @@ if (isset($_POST['cadastrar_anuncio'])) {
 
 
   //variaveis padrão do formulário
-  $nameCorretor          = $_POST['nameCorretor'];
-  $creci                      = $_POST['creci'];
-  $tipo_anuncio       = $_POST['tipo_anuncio'];
-  $cidade             = $_POST['cidade'];
-  $cep                = $_POST['cep'];
-  $endereco           = $_POST['endereco'];
-  $bairro             = $_POST['bairro'];
-  $visibilidade       = $_POST['visibilidade'];
-  $telefone           = $_POST['telefone'];
-  $wpp                = $_POST['wpp'];
-  $valor              = $_POST['valor'];
+  $nameCorretor                       = $_POST['nameCorretor'];
+  $creci                                         = $_POST['creci'];
+  $tipo_anuncio                         = $_POST['tipo_anuncio'];
+  $visibilidade                             = $_POST['visibilidade'];
+  $cidade                                      = $_POST['cidade'];
+  $endereco                                 = $_POST['endereco'];
+  $bairro                                        = $_POST['bairro'];
+  $cep                                            = $_POST['cep'];
+  $telefone                                   = $_POST['telefone'];
+  $wpp                                          = $_POST['wpp'];
+  $valor                                          = $_POST['valor'];
+  $qtd_quartos                            = $_POST['qtd_quartos'];
+  $qtd_suites                                = $_POST['qtd_suites'];
+  $qtd_banheiros                        = $_POST['qtd_banheiros'];
+  $titulo                                         = $_POST['titulo'];
+  $descricao                                 = $_POST['descricao'];
+
 
   //pegar id do usuario cadastrado
   $id_user_anun = $_SESSION['id'];
@@ -53,7 +59,8 @@ if (isset($_POST['cadastrar_anuncio'])) {
 
 
     //inserir dados do form para o banco
-    $query = "INSERT INTO criar_anuncio (nome_user, tipo_anuncio, cidade, cep, endereco, numero_casa, bairro, visibilidade, telefone, wpp, foto_fachada, fotos_comodos, valor, valor_neg, qtd_comodos, id_user_anun, data_cadastro) VALUES ('$post_user', '$tipo_anuncio', '$cidade', '$cep', '$endereco', '$num_casa', '$bairro', '$visibilidade', '$telefone', '$wpp', '$image_data_fachada', '$image_data_comodos', '$valor', '$valor_neg', '$qtd_comodos', '$id_user_anun', NOW())";
+    $query = "INSERT INTO criar_anuncio (nome_corretor, creci, tipo_anuncio, cidade, cep, endereco, bairro, visibilidade, telefone, wpp, foto_fachada, fotos_comodos, valor, qtd_quartos, qtd_suites, qtd_banheiros, titulo, descricao, id_user_anun, data_cadastro) VALUES ('$nameCorretor', '$creci', '$tipo_anuncio', '$cidade', '$cep', '$endereco', '$bairro', '$visibilidade', '$telefone', '$wpp', '$image_data_fachada', '$image_data_comodos', '$valor', '$qtd_quartos', '$qtd_suites', '$qtd_banheiros', '$titulo', '$descricao', '$id_user_anun', NOW())";
+    //$query = "INSERT INTO criar_anuncio (nome_user, tipo_anuncio, cidade, cep, endereco, numero_casa, bairro, visibilidade, telefone, wpp, foto_fachada, fotos_comodos, valor, valor_neg, qtd_comodos, id_user_anun, data_cadastro) VALUES ('$post_user', '$tipo_anuncio', '$cidade', '$cep', '$endereco', '$num_casa', '$bairro', '$visibilidade', '$telefone', '$wpp', '$image_data_fachada', '$image_data_comodos', '$valor', '$valor_neg', '$qtd_comodos', '$id_user_anun', NOW())";
     $new_query = mysqli_query($conn, $query);
 
     if (mysqli_affected_rows($conn) != 0) {
