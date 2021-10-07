@@ -201,14 +201,14 @@ p {
 }
 
 .btn-detalhes {
-    background-color: #2337d6;
+    background-color: #1b294e;
     color: #f4f7ff;
     font-weight: 600;
     border-radius: 5px;
 }
 
 .btn-detalhes:hover {
-    background-color: #1653f0;
+    background-color: #0e1938;
     color: #f4f7ff;
 }
 
@@ -333,14 +333,14 @@ p {
 }
 
 .btn-list-anun {
-    background-color: #2337d6;
+    background-color: #1b294e;
     color: white;
     font-weight: 600;
     border-radius: 5px;
 }
 
 .btn-list-anun:hover {
-    background-color: #1653f0;
+    background-color: #0e1938;
     color: whitesmoke;
 }
 
@@ -374,15 +374,25 @@ p {
 /*meus anuncios*/
 
 .btn-editar {
-    color: black;
+    background-color: #dca235;
+    color: white;
     font-weight: 600;
     border-radius: 5px;
 }
+.btn-editar:hover {
+    background-color: #bb8625;
+    color: white;
+}
 
 .btn-deletar {
-    color: black;
+    background-color: #dc3545;
+    color: white;
     font-weight: 600;
     border-radius: 5px;
+}
+.btn-deletar:hover {
+    background-color: #c22c3b;
+    color: white;
 }
 
 

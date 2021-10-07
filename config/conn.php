@@ -4,7 +4,7 @@ header("content-type: text/html;charset=utf-8");
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
-define('DB_NAME', 'hscDb');
+define('DB_NAME', 'hscdatabase');
 
 // Attempt to connect to MySQL database
 $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
