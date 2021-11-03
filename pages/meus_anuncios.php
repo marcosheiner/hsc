@@ -85,8 +85,8 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
                   <small class="float-right mt-1"><?php echo date("d/m/Y", strtotime($dados_anun["data_cadastro"])); ?></small>
                   <p class="mb-3"><?php echo $visibilidade; ?></p>
                   <a href="#" class="pl-5 pr-5 w-100 btn-lg btn btn-detalhes">Detalhes</a>
-                  <a href="../pages/editar_anuncio.php?open_editar_anuncio=<?php echo $dados_anun['id']; ?>" class="pl-5 pr-5 mt-2 w-100 btn btn-editar">Editar</a>
-                  <button class="pl-5 pr-5 mt-2 w-100 btn btn-deletar" data-toggle="modal" data-target="#exampleModal">Deletar</button>
+                  <a href="../pages/editar_anuncio.php?open_editar_anuncio=<?php echo $dados_anun['id']; ?>" class="pl-5 pr-5 mt-2 w-100 btn btn-editar border">Editar</a>
+                  <button class="pl-5 pr-5 mt-2 w-100 btn btn-deletar border" data-toggle="modal" data-target="#exampleModal">Deletar</button>
                   <!-- Modal -->
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-sm">
@@ -97,7 +97,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
-                        <div class="modal-body border-0 text-justify">
+                        <div class="modal-body border-0">
                           Uma vez que você exclui um anúncio, não há como voltar atrás. Por favor, tenha certeza.
                           <br>
                           <small>Código do Anúncio: <span class="badge badge-dark"><?php echo $dados_anun["id"]; ?></span></small>

@@ -374,25 +374,17 @@ p {
 /*meus anuncios*/
 
 .btn-editar {
-    background-color: #dca235;
-    color: white;
+    background-color: transparent;
+    color: #1b294e;
     font-weight: 600;
     border-radius: 5px;
-}
-.btn-editar:hover {
-    background-color: #bb8625;
-    color: white;
 }
 
 .btn-deletar {
-    background-color: #dc3545;
-    color: white;
+    background-color: transparent;
+    color: #1b294e;
     font-weight: 600;
     border-radius: 5px;
-}
-.btn-deletar:hover {
-    background-color: #c22c3b;
-    color: white;
 }
 
 
