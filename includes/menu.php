@@ -33,7 +33,7 @@
             <a class="nav-link" href="../home/suporte.php">Suporte</a>
           </li>
           <li class="nav-item nav-get-start mr-3 pl-3 pr-3">
-            <a class="nav-link nav-link-get-start" href="../home/login.php">Anúncios</a>
+            <a class="nav-link nav-link-get-start" href="../home/anuncios.php">Anúncios</a>
           </li>
         </ul>
       </div>

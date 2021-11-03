@@ -32,111 +32,146 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
         unset($_SESSION['edit_err']);
         ?>
         <form action="../routes/editar_anuncio_proc.php" method="POST" class="needs-validation" novalidate>
-            <div class="form-row">
-                <input type="hidden" class="" name="id_anuncio" placeholder="Proprietário" value="<?php echo $get_dados_for_edit['id']; ?>" required>
+
+            <input type="hidden" class="" name="id_anuncio" placeholder="Proprietário" value="<?php echo $get_dados_for_edit['id']; ?>" required>
+
+            <small class="text-muted"><span>Responsável e Localidade
+                    <hr>
+                </span></small>
+            <div class="form-row mt-3">
+
                 <div class="form-group col-md-3">
                     <label for="">Corretor Responsável<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control text-capitalize" name="post_user" placeholder="Proprietário" value="<?php echo $get_dados_for_edit['nome_corretor']; ?>" required>
+                    <input type="text" class="form-control text-capitalize disabled" name="nameCorretor" value="<?php echo $get_dados_for_edit['nome_corretor']; ?>" required readonly="readonly">
                     <div class="invalid-feedback">
                         Digite um nome.
                     </div>
                 </div>
+
+                <div class="form-group col-md-3">
+                    <label for="">CRECI<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control text-capitalize disabled" name="creci" value="<?php echo $get_dados_for_edit['creci']; ?>" required readonly="readonly">
+                    <div class=" invalid-feedback">
+                        Digite um creci.
+                    </div>
+                </div>
+
                 <div class="form-group col-md-3">
                     <label for="">Tipo de Anúncio<span class="text-danger">*</span></label>
                     <select class="form-control" name="tipo_anuncio" required>
-                        <option value="<?php echo $get_dados_for_edit['tipo_anuncio']; ?>" selected><?php echo $get_dados_for_edit['tipo_anuncio']; ?></option>
+                        <option value="<?php echo $get_dados_for_edit['tipo_anuncio']; ?>" disabled selected><?php echo $get_dados_for_edit['tipo_anuncio']; ?></option>
                         <option value="Aluguel">Aluguel</option>
                         <option value="Venda">Venda</option>
                     </select>
+                    <div class="invalid-feedback">
+                        Escolha o tipo.
+                    </div>
                 </div>
+
                 <div class="form-group col-md-3">
-                    <label for="">Cidade<span class="text-danger">*</span></label>
-                    <select class="form-control" name="cidade" required>
-                        <option value="<?php echo $get_dados_for_edit['cidade']; ?>" selected><?php echo $get_dados_for_edit['cidade']; ?></option>
-                        <option value="Juazeiro do Norte - CE">Juazeiro do Norte - CE</option>
-                        <option value="Crato - CE">Crato - CE</option>
-                        <option value="Barbalha - CE">Barbalha - CE</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="">CEP<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="cep" name="cep" placeholder="CEP" value="<?php echo $get_dados_for_edit['cep']; ?>" required>
-                    <div class="invalid-feedback">
-                        Digite um cep.
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label for="">Endereço<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control text-capitalize" name="endereco" placeholder="Endereço" value="<?php echo $get_dados_for_edit['endereco']; ?>" required>
-                    <div class="invalid-feedback">
-                        Digite um endereço.
-                    </div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="">N°<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" name="num_casa" placeholder="123, 123 A" value="<?php echo $get_dados_for_edit['numero_casa']; ?>" required>
-                    <div class="invalid-feedback">
-                        Digite um número.
-                    </div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="">Bairro<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control text-capitalize" name="bairro" placeholder="Bairro" value="<?php echo $get_dados_for_edit['bairro']; ?>" required>
-                    <div class="invalid-feedback">
-                        Digite um bairro.
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-12">
                     <label for="">Visibilidade<span class="text-danger">*</span></label>
-                    <select class="form-control disabled" name="visibilidade">
-                        <option value="<?php echo $get_dados_for_edit['visibilidade']; ?>" selected><?php echo $get_dados_for_edit['visibilidade']; ?></option>
+                    <select class="form-control" name="visibilidade" required>
+                        <option value="<?php echo $get_dados_for_edit['visibilidade']; ?>" disabled selected><?php echo $get_dados_for_edit['visibilidade']; ?></option>
                         <option value="Disponível">Disponível</option>
                         <option value="Indisponível">Indisponível</option>
                     </select>
                 </div>
+
             </div>
+            <!--form row-->
             <div class="form-row">
+
+                <div class="form-group col-md-3">
+                    <label for="">Cidade<span class="text-danger">*</span></label>
+                    <select class="form-control" name="cidade" required>
+                        <option value="<?php echo $get_dados_for_edit['cidade']; ?>" disabled selected><?php echo $get_dados_for_edit['cidade']; ?></option>
+                        <option value="Juazeiro do Norte - CE">Juazeiro do Norte - CE</option>
+                        <option value="Crato - CE">Crato - CE</option>
+                        <option value="Barbalha - CE">Barbalha - CE</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Escolha uma cidade.
+                    </div>
+                </div>
+
+
+
+                <div class="form-group col-md-3">
+                    <label for="">Endereço com número<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control text-capitalize" name="endereco" placeholder="Rua Exemplo, 123" required value="<?php echo $get_dados_for_edit['endereco']; ?>">
+                    <div class="invalid-feedback">
+                        Digite um endereço.
+                    </div>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="">Bairro<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control text-capitalize" name="bairro" placeholder="Bairro" required value="<?php echo $get_dados_for_edit['bairro']; ?>">
+                    <div class="invalid-feedback">
+                        Digite um bairro.
+                    </div>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="">CEP<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control text-capitalize" id="cep" name="cep" placeholder="CEP" required value="<?php echo $get_dados_for_edit['cep']; ?>">
+                    <div class="invalid-feedback">
+                        Digite um CEP.
+                    </div>
+                </div>
+
+            </div>
+            <!--form row-->
+            <small class="text-muted"><span>Contato do corretor
+                    <hr>
+                </span></small>
+
+            <div class="form-row mt-3">
+
                 <div class="form-group col-md-6">
                     <label for="">Telefone<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone" value="<?php echo $get_dados_for_edit['telefone']; ?>" required>
+                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone" required value="<?php echo $get_dados_for_edit['telefone']; ?>">
                     <div class="invalid-feedback">
                         Digite um telefone.
                     </div>
                 </div>
+
                 <div class="form-group col-md-6">
                     <label for="">Whatsapp<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="wpp" name="wpp" placeholder="Whatsapp" value="<?php echo $get_dados_for_edit['wpp']; ?>" required>
+                    <input type="text" class="form-control" id="wpp" name="wpp" placeholder="Whatsapp" required value="<?php echo $get_dados_for_edit['wpp']; ?>">
                     <div class="invalid-feedback">
                         Digite um número de Whatsapp.
                     </div>
                 </div>
+
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-12">
+            <!--form row-->
+
+            <small class="text-muted"><span>Informações sobre o imóvel
+                    <hr>
+                </span></small>
+
+            <div class="form-row mt-3">
+
+                <div class="form-group col-md-4">
                     <label for="">Valor do Imóvel<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="valor" name="valor" placeholder="R$ 0.000,00" value="<?php echo $get_dados_for_edit['valor']; ?>" required>
+                    <input type="text" class="form-control" id="valor" name="valor" placeholder="R$ 0.000,00" required value="<?php echo $get_dados_for_edit['valor']; ?>">
                     <div class="invalid-feedback">
                         Digite um valor.
                     </div>
                 </div>
+
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="">Esse valor é negociável?<span class="text-danger">*</span></label>
-                    <select class="form-control" name="valor_neg" required>
-                        <option value="<?php echo $get_dados_for_edit['valor_neg']; ?>" selected><?php echo $get_dados_for_edit['valor_neg']; ?></option>
-                        <option value="Sim">Sim</option>
-                        <option value="Não">Não</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="">Quantidade de Cômodos<span class="text-danger">*</span></label>
-                    <select class="form-control" name="qtd_comodos" required>
-                        <option value="<?php echo $get_dados_for_edit['qtd_comodos']; ?>" selected><?php echo $get_dados_for_edit['qtd_comodos']; ?></option>
+            <!--form row-->
+
+            <div class="form-row mt-3">
+
+                <div class="form-group col-md-4">
+                    <label for="">Quantidade de quartos<span class="text-danger">*</span></label>
+                    <select class="form-control" name="qtd_quartos" required>
+                        <option value="<?php echo $get_dados_for_edit['qtd_quartos']; ?>" disabled selected><?php echo $get_dados_for_edit['qtd_quartos']; ?></option>
+                        <option value="3">1</option>
+                        <option value="3">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
@@ -147,37 +182,73 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
                         <option value="10">10</option>
                         <option value="Mais de 10">Mais de 10</option>
                     </select>
+                    <div class="invalid-feedback">
+                        Informe a quantidade.
+                    </div>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="">Suíte(s)<span class="text-danger">*</span></label>
+                    <select class="form-control" name="qtd_suites" required>
+                        <option value="<?php echo $get_dados_for_edit['qtd_suites']; ?>" disabled selected><?php echo $get_dados_for_edit['qtd_suites']; ?></option>
+                        <option value="3">0</option>
+                        <option value="3">1</option>
+                        <option value="3">2</option>
+                        <option value="4">3</option>
+                        <option value="4">4</option>
+                        <option value="4">5</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe a quantidade.
+                    </div>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="">Quantidade de banheiros<span class="text-danger">*</span></label>
+                    <select class="form-control" name="qtd_banheiros" required>
+                        <option value="<?php echo $get_dados_for_edit['qtd_banheiros']; ?>" disabled selected><?php echo $get_dados_for_edit['qtd_banheiros']; ?></option>
+                        <option value="3">1</option>
+                        <option value="3">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe a quantidade.
+                    </div>
+                </div>
+
+            </div>
+            <!--form row-->
+
+            <div class="form-row mt-3">
+
+                <div class="form-group col-md-12">
+                    <label for="">Título<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control text-capitalize" name="titulo" placeholder="Ex: Casa com 4 quartos..." required value="<?php echo $get_dados_for_edit['titulo']; ?>">
+                    <div class="invalid-feedback">
+                        Digite um título.
+                    </div>
+
                 </div>
             </div>
+            <!--form row-->
+            <div class="form-row mt-3">
 
-            <div class="form-inline mb-4">
+                <label for="">Descrição do anúncio<span class="text-danger">*</span></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="descricao" rows="8" required><?php echo $get_dados_for_edit['descricao']; ?></textarea>
+                <div class="invalid-feedback">
+                    Digite uma descrição.
+                </div>
+
+            </div>
+            <div class="form-inline mt-3 mb-4">
                 <button type="submit" name="editar_anuncio" class="btn btn-anunciar pl-4 pr-4">Editar</button>
             </div>
         </form>
 
         <h1 class="h3 mt-3 mb-3" style="font-weight: 700;">Editar Fotos</h1>
     </main>
-
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-    </script>
 
     </div>
     <!--ROW-->
