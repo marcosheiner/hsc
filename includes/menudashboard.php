@@ -65,7 +65,7 @@
             </h6>
             <ul class="nav flex-column mb-2">
               <li class="nav-item m-1 border">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="../pages/usuarios.php">
                   <i class="fas fa-user pr-2"></i>
                   Lista de Usuários
                 </a>

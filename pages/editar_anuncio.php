@@ -247,7 +247,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
             </div>
         </form>
 
-        <h1 class="h3 mt-3 mb-3" style="font-weight: 700;">Editar Fotos</h1>
+        <h1 class="h3 mt-3 mb-3" style="font-weight: 700;">-</h1>
     </main>
 
     </div>
