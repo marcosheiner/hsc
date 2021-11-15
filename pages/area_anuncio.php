@@ -27,7 +27,7 @@ if (isset($_SESSION['nome_usuario']) && isset($_SESSION['id'])) {   ?>
   $result_anun = $conn->query($sel_anun_database) or die($conn->error);
 
   ?>
-  <main role="main" class="mt-5 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
     <br>
     <div class="container-fluid">
 

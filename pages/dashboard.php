@@ -102,7 +102,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
               <div class="list-anun-dashboard border p-3 text-center">
                 <p class="mb-2" style="font-weight: 600;"><?php echo $dados_anun["tipo_anuncio"]; ?></p>
                 <p class="mb-2">R$ <?php echo $dados_anun["valor"]; ?></p>
-                <a href="" class="w-100 btn btn-list-anun">Detalhes</a>
+                <a href="../pages/area_anuncio.php?open_anuncio=<?php echo $dados_anun["id"]; ?>" class="w-100 btn btn-list-anun">Detalhes</a>
               </div>
             </div>
           <?php } ?>

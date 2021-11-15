@@ -72,8 +72,8 @@ include "../config/conn.php";
 
         <form action="../routes/registerValidation.php" method="POST" onsubmit="return valida( this ) ; ">
           <div class="form-group">
-            <label for="nome_completo">Nome Completo</label>
-            <input type="text" class="form-control form-control-lg input-login text-capitalize" id="nome_completo" name="nome_completo" placeholder="Seu nome" value="" required>
+            <label for="nome_completo">Corretor Responsável</label>
+            <input type="text" class="form-control form-control-lg input-login text-capitalize" id="nome_completo" name="nome_completo" placeholder="Seu nome" value="Tallys" required readonly="readonly">
           </div>
           <div class="form-group">
             <label for="nome_completo">CRECI</label>
