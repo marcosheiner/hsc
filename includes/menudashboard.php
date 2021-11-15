@@ -13,6 +13,9 @@
   <title>Hire</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 </head>
 
 <body>
@@ -71,7 +74,7 @@
                 </a>
               </li>
               <li class="nav-item m-1 border">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="../pages/cad_usuario.php">
                   <i class="fas fa-user-cog pr-2"></i>
                   Cadastrar Usuário
                 </a>

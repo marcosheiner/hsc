@@ -59,7 +59,7 @@ if (!isset($_SESSION)) {
     }
 
     $conn->close();
-    header("Location: ../home/login.php");
+    header("Location: ../pages/usuarios.php");
     exit;
   }
 }

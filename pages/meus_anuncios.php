@@ -84,7 +84,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
                   <p class="mb-2"><?php echo $dados_anun["bairro"]; ?></p>
                   <small class="float-right mt-1"><?php echo date("d/m/Y", strtotime($dados_anun["data_cadastro"])); ?></small>
                   <p class="mb-3"><?php echo $visibilidade; ?></p>
-                  <a href="#" class="pl-5 pr-5 w-100 btn-lg btn btn-detalhes">Detalhes</a>
+                  <a href="../pages/area_anuncio.php?open_anuncio=<?php echo $dados_anun["id"]; ?>" class="pl-5 pr-5 w-100 btn-lg btn btn-detalhes">Detalhes</a>
                   <a href="../pages/editar_anuncio.php?open_editar_anuncio=<?php echo $dados_anun['id']; ?>" class="pl-5 pr-5 mt-2 w-100 btn btn-editar border">Editar</a>
                   <button class="pl-5 pr-5 mt-2 w-100 btn btn-deletar border" data-toggle="modal" data-target="#exampleModal">Deletar</button>
                   <!-- Modal -->

@@ -15,7 +15,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
     if (empty(trim($_POST['new_password']))) {
       $new_password_err = 'Por favor, digite a nova senha.';
     } elseif (strlen(trim($_POST['new_password'])) < 6) {
-      $new_password_err = 'A senha deve ter pelo menos 3 caracteres.';
+      $new_password_err = 'A senha deve ter pelo menos 6 caracteres.';
     } else {
       $new_password = trim($_POST['new_password']);
     }
