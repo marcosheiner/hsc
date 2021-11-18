@@ -101,12 +101,6 @@
               </a>
             </li>
             <li class="nav-item m-1 border">
-              <a class="nav-link" href="#">
-                <i class="fas fa-bell pr-2"></i>
-                Atualizações
-              </a>
-            </li>
-            <li class="nav-item m-1 border">
               <a class="nav-link" href="../routes/logout.php">
                 <i class="fas fa-sign-out-alt pr-2"></i>
                 Sair

@@ -21,7 +21,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
 
         <?php if (isset($_SESSION['validar_edicao'])) : ?>
             <div class="alert alert-success" role="alert">
-                Dados alterados com sucesso!
+                Dados alterados com sucesso! Realize o login novamente para atualizar a sessão.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -58,9 +58,6 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
 
                         <span style="float: right;"><i class="fas fa-envelope"></i> </span>
                         <p class="mb-3"><?php echo $_SESSION['email_user']; ?></p>
-
-                        <span style="float: right;"><i class="fas fa-phone"></i> </span>
-                        <p class="mb-3"><?php echo $_SESSION['telefone_user']; ?></p>
 
                         <span style="float: right;"><i class="fas fa-key"></i> </span>
                         <p class="bio mb-3">Código: <span class="badge badge-dark"><?php echo $_SESSION['id']; ?></span></p>
