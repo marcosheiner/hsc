@@ -16,7 +16,7 @@ $result_anun = $conn->query($sel_anun) or die($conn->error);
   <div style="display: grid; place-content: center; height: 300px;">
     <div class="alert">
       <div class="text-center">
-        <p class="lead">Hmm, ninguém publicou. <a href="../home/login.php">Você pode ser o primeiro! 😄</a></p>
+        <p class="lead">Hmm, ninguém publicou ainda. 😄</p>
       </div>
     </div>
   </div>
@@ -24,16 +24,16 @@ $result_anun = $conn->query($sel_anun) or die($conn->error);
 <?php } else { ?>
 
   <div class="container mt-5">
-    <div class="area-buscar mb-5">
-      <form action="">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control mr-1 border text-capitalize" name="pesquisar_anuncio" id="pesquisar_anuncio" placeholder="Pesquisar Anúncio" required>
-          <span class="input-group-btn">
-            <button class="btn" type="submit" value="gerar_pesquisa"><i class="fas fa-search"></i></button>
-          </span>
-        </div>
-      </form>
-    </div>
+    <!--pesquisar anuncio-->
+    <form method="GET" action="../home/buscar_anuncio.php">
+      <small>Procure por Cidade, Bairro ou Tipo de Anúncio</small>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control mr-1 border text-capitalize" name="pesquisar_anuncio" id="pesquisar_anuncio" placeholder="Pesquisar Anúncio" required placeholder="Pesquisar Anúncio">
+        <span class="input-group-btn">
+          <button class="btn btn-warning" style="font-weight: 300;" type="submit" value="gerar_pesquisa">Procurar</button>
+        </span>
+      </div>
+    </form>
 
     <h1 class="h3 pl-3" style="font-weight: 700;">Anúncios Recentes</h1>
     <?php if (isset($_SESSION['validar_denuncia'])) : ?>

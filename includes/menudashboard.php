@@ -79,12 +79,6 @@
                   Cadastrar Usuário
                 </a>
               </li>
-              <li class="nav-item m-1 border">
-                <a class="nav-link" href="../routes/logout.php">
-                  <i class="fas fa-cog pr-2"></i>
-                  Configurar Usuário
-                </a>
-              </li>
             </ul>
           <?php } ?>
 

@@ -52,10 +52,7 @@ if (isset($_SESSION['nome_usuario']) && isset($_SESSION['id'])) {   ?>
                         <form action="../routes/edit_perfil.php" method="POST">
                             <input type="hidden" name="id_user_session" value="<?php echo $get_dados_for_edit['id']; ?>">
                             <div class="row mb-3">
-                                <div class="col">
-                                    <label>Corretor Responsável:</label>
-                                    <input type="text" name="nome_completo" placeholder="Nome Completo" class="form-control" value="<?php echo $get_dados_for_edit['nome_completo']; ?>" disabled>
-                                </div>
+
                                 <div class="col">
                                     <label>Nome Usuário:</label>
                                     <input type="text" name="nome_user" id="nome_user" placeholder="Usuário" class="form-control" value="<?php echo $get_dados_for_edit['nome_user']; ?>" required>
@@ -66,10 +63,7 @@ if (isset($_SESSION['nome_usuario']) && isset($_SESSION['id'])) {   ?>
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <div class="col">
-                                    <label>Telefone do Corretor Responsável:</label>
-                                    <input type="text" class="form-control" name="telefone_user" placeholder="(00) 90000-0000" id="telefone" value="<?php echo $get_dados_for_edit['telefone_user']; ?>" disabled>
-                                </div>
+
                                 <div class="col">
                                     <label>Função:</label>
                                     <input type="text" class="form-control" name="funcao_user" value="<?php echo $get_dados_for_edit['funcao']; ?>" disabled>

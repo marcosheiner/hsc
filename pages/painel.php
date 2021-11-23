@@ -27,16 +27,17 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
         <?php } else { ?>
 
             <h1 class="h3 mb-3" style="font-weight: 700;">Painel</h1>
-            <div class="area-buscar mb-5">
-                <form action="">
-                    <div class="input-group mb-2">
-                        <input type="text" class="text-capitalize form-control mr-1 border" name="pesquisar_anuncio" id="pesquisar_anuncio" placeholder="Pesquisar Anúncio" required>
-                        <span class="input-group-btn">
-                            <button class="btn" type="submit" value="gerar_pesquisa"><i class="fas fa-search"></i></button>
-                        </span>
-                    </div>
-                </form>
-            </div>
+            <!--pesquisar anuncio-->
+            <form method="GET" action="../pages/buscar_anuncio.php">
+                <small>Procure por Cidade, Bairro ou Tipo de Anúncio</small>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control mr-1 border text-capitalize" name="pesquisar_anuncio" id="pesquisar_anuncio" placeholder="Pesquisar Anúncio" required placeholder="Pesquisar Anúncio">
+                    <span class="input-group-btn">
+                        <button class="btn btn-warning" style="font-weight: 300;" type="submit" value="gerar_pesquisa">Procurar</button>
+                    </span>
+                </div>
+            </form>
+
 
             <h1 class="h3 pl-3" style="font-weight: 700;">Anúncios</h1>
 
