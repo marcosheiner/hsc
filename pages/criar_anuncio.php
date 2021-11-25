@@ -142,7 +142,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
 
         <div class="form-group col-md-6">
           <label for="">Telefone<span class="text-danger">*</span></label>
-          <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone" required>
+          <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone" value="(88) 98845-7881" required readonly="readonly">
           <div class="invalid-feedback">
             Digite um telefone.
           </div>
@@ -150,7 +150,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
 
         <div class="form-group col-md-6">
           <label for="">Whatsapp<span class="text-danger">*</span></label>
-          <input type="text" class="form-control" id="wpp" name="wpp" placeholder="Whatsapp" required>
+          <input type="text" class="form-control" id="wpp" name="wpp" placeholder="Whatsapp" value="(88) 98845-7881" required readonly="readonly">
           <div class="invalid-feedback">
             Digite um número de Whatsapp.
           </div>

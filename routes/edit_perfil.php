@@ -24,3 +24,6 @@ if (isset($_POST['btn-atualizar'])) {
         header("Location: ../pages/perfil.php");
     }
 }
+
+$conn->close();
+exit;

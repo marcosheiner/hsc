@@ -16,6 +16,4 @@
 </div>
 <!--container-->
 
-<?php include '../includes/footerInfo.php'; ?>
-
 <?php include '../includes/footer.php'; ?>

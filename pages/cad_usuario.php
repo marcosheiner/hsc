@@ -87,7 +87,7 @@ if (isset($_SESSION['email_user']) && isset($_SESSION['id'])) {   ?>
               </div>
               <div class="form-group">
                 <label for="telefone">Telefone</label>
-                <input type="text" class="form-control form-control-lg input-login" id="telefone" name="telefone_user" placeholder="Telefone" required>
+                <input type="text" class="form-control form-control-lg input-login" id="telefone" name="telefone_user" placeholder="Telefone" value="(88) 98845-7881" required readonly="readonly">
               </div>
               <div class="form-group">
                 <label for="email_user">E-mail</label>
