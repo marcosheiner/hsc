@@ -39,7 +39,7 @@ $result_anun = $conn->query($sel_anun_database) or die($conn->error);
     <div class="row">
       <div class="col-xl-6 col-md-6 mb-4">
         <div class="area-cont-anuncio mb-3">
-          <h1 class="h4">Casa</h1>
+          <h1 class="h4"><?php echo $row_dados_anuncio['titulo']; ?></h1>
           <hr>
           <!--DADOS DO IMÓVEL-->
           <p class="float-right"><strong></strong> <?php echo $row_dados_anuncio['visibilidade']; ?></p>
@@ -52,11 +52,13 @@ $result_anun = $conn->query($sel_anun_database) or die($conn->error);
           <p class="mb-1"><strong>Bairro:</strong> <?php echo $row_dados_anuncio['bairro']; ?></p>
 
           <span class="float-right"><i class="fas fa-map-pin"></i></span>
-          <p class="mb-1"><strong>Endereço:</strong> <?php echo $row_dados_anuncio['endereco']; ?>, <?php echo $row_dados_anuncio['numero_casa']; ?></p>
+          <p class="mb-1"><strong>Endereço:</strong> <?php echo $row_dados_anuncio['endereco']; ?></p>
 
           <span class="float-right"><i class="fas fa-mail-bulk"></i></span>
           <p class="mb-3"><strong>CEP:</strong> <?php echo $row_dados_anuncio['cep']; ?></p>
 
+          <hr>
+          <p class="mb-3"><strong>Descrição:</strong> <?php echo $row_dados_anuncio['descricao']; ?></p>
           <!--CONTATO DO ANUNCIANTE-->
           <hr>
           <h1 class="h5"><strong>Dados para Contato</strong></h1>
@@ -77,8 +79,7 @@ $result_anun = $conn->query($sel_anun_database) or die($conn->error);
           <span class="float-right"><i class="fas fa-dollar-sign"></i></span>
           <h1 class="h4">Sobre o Imóvel</h1>
           <hr>
-          <p class="float-right"><strong>Valor negociável:</strong> <?php echo $row_dados_anuncio['valor_neg']; ?></p>
-          <p class="h5"><strong>Valor:</strong> R$ <?php echo $row_dados_anuncio['valor']; ?></p>
+          <p class="h5"><strong>Valor:</strong> <span class="bg-warning p-2">R$ <?php echo $row_dados_anuncio['valor']; ?></span></p>
 
         </div>
       </div>

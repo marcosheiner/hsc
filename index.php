@@ -81,7 +81,7 @@
         <div class="col-xl-3 col-md-4">
           <h1 class="h5 mb-3">Redes Sociais</h1>
           <a href="" class="text-light">
-            <p><small><i class="fab fa-instagram"></i> Instagram</small></p>
+            <a href="https://www.instagram.com/talyseduardocorretor/" class="text-light"><small><i class="fab fa-instagram"></i> Instagram</small></a>
           </a>
         </div>
       </div>
